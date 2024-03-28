@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserinfoComponent } from "./userinfo/userinfo.component";
 
 @Component({
   selector: 'app-root',
@@ -8,12 +9,15 @@ import { Component } from '@angular/core';
     <section class="main">
       <h1>Metrics and Figures Dashboard</h1>
       <section class="content">
-        <article class="tile"></article>
         <article class="tile">
-          <img src="/assets/noun-pie-chart-6331100-C462DD.png" height="300" />
+           <app-userinfo></app-userinfo>
         </article>
         <article class="tile">
-          <img src="/assets/noun-bar-chart-1092111-FF824A.png" height="300" />
+          <img src="/assets/noun-pie-chart-6331100-C462DD.png" height="300"/>
+        </article>
+
+        <article class="tile">
+          <img src="/assets/noun-bar-chart-1092111-FF824A.png" height="300"/>
         </article>
       </section>
     </section>
@@ -22,6 +26,7 @@ import { Component } from '@angular/core';
     :host {
       display: flex;
     }
+
     .menu {
       width: 100px;
       height: 90vh;
@@ -30,6 +35,7 @@ import { Component } from '@angular/core';
       border-radius: 5px;
       color: white;
     }
+
     .main {
       background: rgb(29 36 49);
       width: 100%;
@@ -38,6 +44,7 @@ import { Component } from '@angular/core';
       border-radius: 5px;
       color: white;
     }
+
     .tile {
       width: 400px;
       height: 400px;
@@ -50,11 +57,15 @@ import { Component } from '@angular/core';
       justify-content: center;
       align-items: center;
     }
+
     .content {
       display: flex;
       flex-wrap: wrap;
     }
   `,
+  imports: [
+    UserinfoComponent
+  ]
 })
 export class AppComponent {
   title = '03-component-composition';
