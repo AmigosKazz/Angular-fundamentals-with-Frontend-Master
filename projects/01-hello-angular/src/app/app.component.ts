@@ -4,12 +4,22 @@ import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, RouterOutlet],
   template: `
     <h1>If you are reading this...</h1>
     <p>Things have worked out well! 🎉</p>
+    <ol>
+        <li>ETA-NEwJeans</li>
+        <li>REading Player One -</li>
+        <li>Dodgeball</li>
+    </ol>
   `,
-  styles: ``,
+  styles: [`
+    ol {
+    list-style-type: upper-roman;
+    }
+  `],
+  standalone: true
 })
-export class AppComponent {}
+export class AppComponent {
+
+}
